@@ -1,16 +1,98 @@
-# techread_showcase
+# 📰 TechRead Flutter App
 
-A new Flutter project.
+This repository contains the Flutter source code for **TechRead**, a modern article-reading application.
 
-## Getting Started
+It follows a **feature-first architecture** for scalability and maintainability, and it uses **Widgetbook** for UI component testing and documentation.
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+## 🏗️ Project Structure
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+This project uses a **feature-first directory structure**, a common best practice for scalable Flutter apps.  
+It also includes **Widgetbook** for isolated component testing and documentation.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### 📂 Root Directory Structure
+
+
+├── .github/
+│ └── workflows/
+│ └── widgetbook.yml # GitHub Action for Widgetbook PR comments
+│
+├── lib/
+│ ├── features/
+│ │ ├── article/
+│ │ │ └── screens/
+│ │ │ └── article_detail_screen.dart
+│ │ └── home/
+│ │ ├── data/
+│ │ │ └── mock_data.dart
+│ │ ├── screens/
+│ │ │ └── home_screen.dart
+│ │ └── widgets/
+│ │ ├── article_list_card.dart
+│ │ └── featured_article_card.dart
+│ │
+│ ├── models/
+│ │ └── article.dart
+│ │
+│ └── main.dart # App entry point, MaterialApp, and theme setup
+│
+├── widgetbook/
+│ └── widgetbook.dart # Widgetbook entry point and component setup
+│
+└── pubspec.yaml
+
+
+---
+
+## 📁 `lib/` Directory Explained
+
+- **features/**: Contains all the feature-level modules of the app.
+  - **home/**: The main home screen feature, including its screens, widgets, and data.
+  - **article/**: The article detail/reading feature.
+- **models/**: Contains plain Dart data models (e.g., `Article`) used across the app.
+- **main.dart**: The primary entry point for the application.
+
+---
+
+## 💡 Why This Structure?
+
+- **Scalability**: Add a new feature (e.g., `profile`) simply by creating a new folder inside `features/`.
+- **Encapsulation**: All files related to a single feature (screens, widgets, data, state) live together.
+- **Readability**: It's immediately clear what features your app has.
+
+---
+
+## 🧩 Component Library with Widgetbook
+
+We use **Widgetbook** to build, test, and document UI components in isolation.
+
+- **Location**: `widgetbook/`
+- **Purpose**:  
+  Widgetbook allows developers to visualize all widgets and their various states.  
+  This helps maintain UI consistency and speeds up development.
+
+---
+
+## ⚙️ CI/CD with GitHub Actions
+
+This project uses **GitHub Actions** to automate parts of the development workflow.
+
+- **Workflow File**: `.github/workflows/widgetbook.yml`
+- **Trigger**: Runs automatically on every **pull request** (`pull_request`).
+- **Job Description**:  
+  Builds the Widgetbook and (if configured) deploys it, adding a comment to the PR with a link to the deployed version.  
+  This makes it easy to **visually review UI changes** before merging.
+
+---
+
+### 🧠 Summary
+
+✅ **Architecture:** Feature-first  
+✅ **UI Testing:** Widgetbook  
+✅ **Automation:** GitHub Actions  
+✅ **Goal:** Scalable, maintainable, and developer-friendly Flutter application.
+
+---
+
+**Made with ❤️ using Flutter**
