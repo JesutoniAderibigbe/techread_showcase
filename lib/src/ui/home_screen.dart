@@ -114,7 +114,7 @@ class _HomePageState extends State<HomePage> {
                   backgroundColor: Colors.grey[100],
                   selectedColor: Colors.blue[800],
                   labelStyle: TextStyle(
-                    color: isSelected ? Colors.white : Colors.black,
+                    color: isSelected ? Colors.blue : Colors.black,
                   ),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20.0),
