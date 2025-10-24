@@ -23,8 +23,9 @@ class _FeaturedArticleCardState extends State<FeaturedArticleCard> {
         );
       },
       child: Card(
-        elevation: 10, // Design looks flat
+        elevation: 12, // Design looks flat
         color: Colors.white,
+        shadowColor: Colors.grey.withOpacity(0.2),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(16.0),
         ),
