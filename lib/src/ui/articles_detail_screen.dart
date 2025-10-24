@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:techread_showcase/src/components/widgets/cool_button.dart';
 
 import 'package:techread_showcase/src/models/article_model.dart';
 
@@ -41,7 +42,6 @@ class ArticleDetailScreen extends StatelessWidget {
               ),
             ],
             flexibleSpace: FlexibleSpaceBar(
-              
               stretchModes: const [StretchMode.zoomBackground],
               background: Image.network(
                 article.imageUrl, // Use the article's image
@@ -145,50 +145,63 @@ class ArticleDetailScreen extends StatelessWidget {
       child: Row(
         children: [
           Expanded(
-            child: OutlinedButton(
-              onPressed: () {
-                // Handle Bookmark
-              },
-              style: OutlinedButton.styleFrom(
-                padding: const EdgeInsets.symmetric(vertical: 14.0),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12.0),
-                ),
-                side: BorderSide(color: Colors.blue[800]!),
-              ),
-              child: Text(
-                'Bookmark',
-                style: TextStyle(
-                  color: Colors.blue[800],
-                  fontWeight: FontWeight.bold,
-                  fontSize: 16,
-                ),
-              ),
+            child:
+            // OutlinedButton(
+            //   onPressed: () {
+            //     // Handle Bookmark
+            //   },
+            //   style: OutlinedButton.styleFrom(
+            //     padding: const EdgeInsets.symmetric(vertical: 14.0),
+            //     shape: RoundedRectangleBorder(
+            //       borderRadius: BorderRadius.circular(12.0),
+            //     ),
+            //     side: BorderSide(color: Colors.blue[800]!),
+            //   ),
+            //   child: Text(
+            //     'Bookmark',
+            //     style: TextStyle(
+            //       color: Colors.blue[800],
+            //       fontWeight: FontWeight.bold,
+            //       fontSize: 16,
+            //     ),
+            //   ),
+            // ),
+            CoolButton(
+              label: "Bookmark",
+              onPressed: () {},
+              isFilled: false,
+              textColor: Colors.blue[800]!,
             ),
           ),
           const SizedBox(width: 12),
           Expanded(
-            child: ElevatedButton(
-              onPressed: () {
-                // Handle Read More
-              },
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.blue[800],
-                padding: const EdgeInsets.symmetric(vertical: 14.0),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12.0),
-                ),
-                elevation: 0,
-              ),
-              child: const Text(
-                'Read More',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 16,
-                ),
-              ),
+            child: CoolButton(
+              label: "Read More",
+              onPressed: () {},
+              isFilled: true,
             ),
+
+            // ElevatedButton(
+            //   onPressed: () {
+            //     // Handle Read More
+            //   },
+            //   style: ElevatedButton.styleFrom(
+            //     backgroundColor: Colors.blue[800],
+            //     padding: const EdgeInsets.symmetric(vertical: 14.0),
+            //     shape: RoundedRectangleBorder(
+            //       borderRadius: BorderRadius.circular(12.0),
+            //     ),
+            //     elevation: 0,
+            //   ),
+            //   child: const Text(
+            //     'Read More',
+            //     style: TextStyle(
+            //       color: Colors.white,
+            //       fontWeight: FontWeight.bold,
+            //       fontSize: 16,
+            //     ),
+            //   ),
+            // ),
           ),
         ],
       ),
