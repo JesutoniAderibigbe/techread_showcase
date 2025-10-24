@@ -6,12 +6,10 @@ import 'package:techread_showcase/src/components/widgets/cool_button.dart';
 @widgetbook.UseCase(name: 'Cool Button', type: CoolButton)
 Widget buildCoolButtonUseCase(BuildContext context) {
   return Center(
-    child: Expanded(
-      child: CoolButton(
-        label: context.knobs.string(label: 'Name', initialValue: 'Read More'),
-        isFilled: context.knobs.boolean(label: 'Is Filled', initialValue: true),
-        onPressed: () {},
-      ),
+    child: CoolButton(
+      label: context.knobs.string(label: 'Name', initialValue: 'Read More'),
+      isFilled: context.knobs.boolean(label: 'Is Filled', initialValue: true),
+      onPressed: () {},
     ),
   );
 }
