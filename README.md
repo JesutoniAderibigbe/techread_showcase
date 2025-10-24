@@ -14,34 +14,37 @@ It also includes **Widgetbook** for isolated component testing and documentation
 ### 📂 Root Directory Structure
 
 
+.
 ├── .github/
-│ └── workflows/
-│ └── widgetbook.yml # GitHub Action for Widgetbook PR comments
+│   ├── actions/
+│   │   └── bootstrap/
+│   │       └── action.yaml     # Reusable action for setup
+│   └── workflows/
+│       └── widgetbook-cloud.yaml # GitHub Action for Widgetbook Cloud
 │
 ├── lib/
-│ ├── features/
-│ │ ├── article/
-│ │ │ └── screens/
-│ │ │ └── article_detail_screen.dart
-│ │ └── home/
-│ │ ├── data/
-│ │ │ └── mock_data.dart
-│ │ ├── screens/
-│ │ │ └── home_screen.dart
-│ │ └── widgets/
-│ │ ├── article_list_card.dart
-│ │ └── featured_article_card.dart
-│ │
-│ ├── models/
-│ │ └── article.dart
-│ │
-│ └── main.dart # App entry point, MaterialApp, and theme setup
+│   ├── features/
+│   │   ├── article/
+│   │   │   └── screens/
+│   │   │       └── article_detail_screen.dart
+│   │   └── home/
+│   │       ├── data/
+│   │       │   └── mock_data.dart
+│   │       ├── screens/
+│   │       │   └── home_screen.dart
+│   │       └── widgets/
+│   │           ├── article_list_card.dart
+│   │           └── featured_article_card.dart
+│   │
+│   ├── models/
+│   │   └── article.dart
+│   │
+│   └── main.dart             # App entry point, MaterialApp, and theme setup
 │
 ├── widgetbook/
-│ └── widgetbook.dart # Widgetbook entry point and component setup
+│   └── widgetbook.dart       # Widgetbook entry point and component setup
 │
 └── pubspec.yaml
-
 
 ---
 
