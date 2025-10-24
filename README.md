@@ -13,7 +13,7 @@ It also includes **Widgetbook** for isolated component testing and documentation
 
 ### 📂 Root Directory Structure
 
-
+```
 .
 ├── .github/
 │   ├── actions/
@@ -45,6 +45,8 @@ It also includes **Widgetbook** for isolated component testing and documentation
 │   └── widgetbook.dart       # Widgetbook entry point and component setup
 │
 └── pubspec.yaml
+
+```
 
 ---
 
