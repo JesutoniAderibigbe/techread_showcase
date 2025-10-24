@@ -21,7 +21,7 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: const Text('TechRead Showcase'),
+        title: const Text('TechRead Showcase(s)'),
 
         actions: [
           IconButton(
