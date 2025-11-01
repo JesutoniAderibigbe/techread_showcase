@@ -112,14 +112,14 @@ class _HomePageState extends State<HomePage> {
                     });
                   },
                   backgroundColor: Colors.grey[100],
-                  selectedColor: Colors.red[800],
+                  selectedColor: Colors.blue[800],
                   labelStyle: TextStyle(
-                    color: isSelected ? Colors.red : Colors.black,
+                    color: isSelected ? Colors.blue : Colors.black,
                   ),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20.0),
                     side: BorderSide(
-                      color: isSelected ? Colors.red[800]! : Colors.grey[200]!,
+                      color: isSelected ? Colors.blue[800]! : Colors.grey[200]!,
                     ),
                   ),
                 ),
